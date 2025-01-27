@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EviMed - Medical Search</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+     <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="evi.css">
+    <!--<link rel="stylesheet" href="http.css">-->
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="header-left">
+                    <img src="../picture/logo.png" alt="EviMed Logo" class="logo">
+                    <h1 class="brand-name">EviMed</h1>
+                </div>
+                <div class="header-center">
+                    <span class="welcome-text">Welcome to EviMed 👋</span>
+                </div>
+
+                
+                <div class="header-right">
+                    <a href="https://www.example.com/search" class="icon-link" title="友情链接">
+                        <img src="../picture/1.png" alt="Search" class="icon">
+                        <!-- <span>搜索</span> -->
+                      </a>
+                      <a href="https://www.example.com/home" class="icon-link" title="搜索式自动生成工具">
+                        <img src="../picture/2.png" alt="Home" class="icon">
+                        <!-- <span>主页</span> -->
+                      </a>
+                      <a href="https://www.example.com/more" class="icon-link" title="消息">
+                        <img src="../picture/3.png" alt="More" class="icon">
+                        <!-- <span>更多</span> -->
+                      </a>
+                    
+                      <a href="https://www.example.com/more" class="icon-link" title="搜索帮助">
+                        <img src="../picture/4.png" alt="User" class="avatar" style="width: auto;height: auto;">
+                        <!-- <select>
+                            <option value="option1">选项 1</option>
+                            <option value="option2">选项 2</option>
+                            <option value="option3">选项 3</option>
+                          </select> -->
+                        <!-- <button class="icon-btn"><i class="bi bi-three-dots-vertical"></i></button> -->
+                    </a>
+                    
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="content-container">
+                <!-- Search Form -->
+                <div class="search-panel">
+                    <div class="panel-header">
+                        <div class="language-toggle">
+                            <span >中英文拓展</span>
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <form class="search-form">
+                        <div class="form-group">
+                            <label class="required">您想要验证的药品名称/药品类别/联合用药方案是:</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="请输入药品名称" style="long: 1000px;">
+                                <button type="button" class="btn btn-outline-secondary">+ 同义词拓展</button>
+                                <button type="button" class="btn btn-outline-primary">+</button>
+                            </div>
+                        </div>
+                      
+                            <hr class="dashed-hr">
+                            
+                        <div class="form-group">
+                            <label class="required">您想要验证的疾病名称/患病人群是:</label>
+                            <div class="input-group">
+                                <select class="form-select disease-select">
+                                    <option>疾病名称</option>
+                                </select>
+                                <input type="text" class="form-control" placeholder="请选择输入疾病名称">
+                                <button type="button" class="btn btn-outline-secondary">+ 同义词拓展</button>
+                                <button type="button" class="btn btn-outline-primary">+</button>
+                            </div>
+                        </div>
+
+                        <hr class="dashed-hr">
+
+                        <div class="form-group">
+                            <label>您想要针对的相关药品是:</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="请选择对照药品">
+                                <button type="button" class="btn btn-outline-secondary">+ 同义词拓展</button>
+                                <button type="button" class="btn btn-outline-primary">+</button>
+                            </div>
+                        </div>
+
+                        <hr class="dashed-hr">
+
+                        <div class="form-group">
+                            <label>您关注的结局指标是:</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="请选择结局指标">
+                                <button type="button" class="btn btn-outline-secondary">+ 同义词拓展</button>
+                                <button type="button" class="btn btn-outline-primary">+</button>
+                            </div>
+                        </div>
+
+                        <hr class="dashed-hr">
+
+                        <div class="form-group">
+                            <label>您想纳入的研究类型包括:</label>
+                            <div class="tag-container">
+                                
+                                <button type="button" class="tag">传统综述</button>
+                                <button type="button" class="tag">随机对照试验</button>
+                                <button type="button" class="tag">临床试验</button>
+                                <button type="button" class="tag">队列研究</button>
+                                <button type="button" class="tag">病例对照研究</button>
+                                <button type="button" class="tag">横断面研究</button>
+                                <button type="button" class="tag">病例系列</button>
+                                <button type="button" class="tag">病例报告</button>
+                                <button type="button" class="tag">专家意见和评价</button>
+                                <button type="button" class="tag">指南/共识</button>
+                                <button type="button" class="tag">动物实验</button>
+                                <button type="button" class="tag">体外实验</button>
+                                <button type="button" class="tag">其他</button>
+                            </div>
+                            <hr class="dashed-hr">
+                            
+                            
+                        </div>
+
+                        <div class="database-section">
+                            <!-- <h4 style="display: inline;">检索的数据库包括:</h4> -->
+                            <div class="text-toggle-button" style="color: rgb(71, 87, 146);  display: inline; font-size: 1.2rem;" > 检索的数据库包括:</div>
+                            
+                            <label for="toggleAll" class="toggle-button"  style="background-color:#5364b1; color: #fff;" >全部展开</label>
+                            <span class="caret"></span>
+                            <input type="checkbox" id="toggleAll" class="toggle-checkbox">
+                            <div class="database-content">
+                                <section class="database-group">
+                                    <h4>文献库</h4>
+                                    <div class="database-list">
+                                        <p>中文：中国知网、万方数据知识服务平台、维普中文期刊服务平台、中国生物医学文献数据库</p>
+                                        <p>英文：PubMed、Embase、Cochrane Library</p>
+                                    </div>
+                                </section>
+                                <section class="database-group">
+                                    <h4>指南库</h4>
+                                    <div class="database-list">
+                                        <p>中文：中国临床肿瘤学会(Chinese Society of Clinical Oncology，CSCO)、中华医学会等国内权威学会组织</p>
+                                        <p>英文：美国国家综合癌网(National Comprehensive Cancer Network，NCCN)、世界卫生组织(World Health Organization，WHO)、国外权威学会组织</p>
+                                        <p style="font-size: 1.2rem;">检索的数据库 包括:
+                                            全部收起▼
+                                            文献库
+                                            中国知网、万方数据知识服务平台、维普中文期刊服务平台、中国生物医学文献数据库中文:英文:PubMed、Embase、Cochrane Library
+                                            指南库
+                                            。中文:中国临床肿瘤学会(Chinese Society of Clinical Oncology，CSCO)、中华医学会等国内权威学会或组织英文:美国国家综合症网络(National Comprehensive Cancer Network，NCCN)、世界卫生组织(World HealthOrganization，WHO)、国外权威学会或组织
+                                            说明书库
+                                            ·中文:国家药品监督管理局、用药助手、医脉通、药智网、39健康网、亮健好药英文:美国食品药品监督管理局(food and Drug Administration，FDA)、DAILYMED、欧洲药品管理局(The furopeanMedicines Agency, EMA)
+                                            欧洲药品管理局(The European Medicines Agency, EMA)
+                                            日文:日本药品及医疗器械管理局(Pharmaceuticals and Medical Devices Agency，PMDA)
+                                            药品临床试验数据库
+                                            中文:中国临床试验注册中心
+                                            英文:ClinicalTrials.gov
+                                            药品不良反应库
+                                            FDA Adverse Event Reporting System (FAERS)检索的数据库 包括:
+                                            全部收起▼
+                                            文献库
+                                            中国知网、万方数据知识服务平台、维普中文期刊服务平台、中国生物医学文献数据库中文:英文:PubMed、Embase、Cochrane Library
+                                            指南库
+                                            。中文:中国临床肿瘤学会(Chinese Society of Clinical Oncology，CSCO)、中华医学会等国内权威学会或组织英文:美国国家综合症网络(National Comprehensive Cancer Network，NCCN)、世界卫生组织(World HealthOrganization，WHO)、国外权威学会或组织
+                                            说明书库
+                                            ·中文:国家药品监督管理局、用药助手、医脉通、药智网、39健康网、亮健好药英文:美国食品药品监督管理局(food and Drug Administration，FDA)、DAILYMED、欧洲药品管理局(The furopeanMedicines Agency, EMA)
+                                            欧洲药品管理局(The European Medicines Agency, EMA)
+                                            日文:日本药品及医疗器械管理局(Pharmaceuticals and Medical Devices Agency，PMDA)
+                                            药品临床试验数据库
+                                            中文:中国临床试验注册中心
+                                            英文:ClinicalTrials.gov
+                                            药品不良反应库
+                                            FDA Adverse Event Reporting System (FAERS)</p>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                   
+
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-light">重置</button>
+                            <button type="button" class="btn btn-secondary">人工生成评估报告</button>
+                            <button type="button" class="btn btn-primary">AI生成评估报告</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Help Sidebar -->
+                <aside class="help-sidebar">
+                    <div class="help-card">
+                        <h3><i class="bi bi-info-circle"></i> 词汇输入提示</h3>
+                        <div class="help-content">
+                            <section>
+                                <h4>检索词</h4>
+                                <p>同一行内仅支持输入一个检索词，输入多个检索词，无论多个词语之间是否有连接符，视为一个词语。</p>
+                            </section>
+                            <section>
+                                <h4>选择同义词</h4>
+                                <p>若您想自动选择系统给出的同义词，请在输入完必要检索词后，点击"同义词拓展"按钮，查看同义词，同义词默认全选。</p>
+                            </section>
+                            <section>
+                                <h4>反馈功能</h4>
+                                <p>您可在同义词拓展框中，反馈认为错误的同义词，提交检索系统，感谢您的持续反馈。</p>
+                            </section>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

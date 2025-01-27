@@ -1,0 +1,167 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
+}
+
+.nav-tabs > li.active > a {
+    font-weight: bold;
+    color: #337ab7;
+}
+
+.navbar-fixed-top{
+    position: relative;
+    width: 100%;
+    min-width: 1200px;
+    height: 62px;
+    background-color: #f7f7f7;
+    border-top: 5px solid #004fd9;
+    box-shadow: 0 2px 5px 0 rgba(7, 71, 138, 0.08);
+    font-family: "Microsoft yahei", serif;
+}
+
+
+
+
+/* 覆盖默认的按钮样式 */
+.btn-default {
+    background-color:transparent ; /* 背景颜色 */
+    border:none; /* 边框颜色 */
+    color: rgb(10, 86, 111); /* 文字颜色 */
+    font-weight: bold; /* 文字加粗 */
+    margin-top: 10px
+}
+
+.btn-jigoudenglu{
+    width: 80px;
+    height: 35px;
+    color: #004FD9;
+    background: url(https://login.cnki.net/tlogin/images/ecp_header_personal_loginbg.png?v=20241016);
+    background-size:cover;
+   
+}
+
+.dropdown-menu {
+    display: none;
+   
+}
+
+/* 鼠标悬浮时显示下拉菜单 */
+/* .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.btn-group:hover .dropdown-menu{
+    display: block;
+} */
+
+.btn-group{
+    border: none;
+    background-color:transparent ; 
+    color:#004FD9;
+    margin-top: 3px ;
+}
+.item{
+    width: 100px;
+    height: 25px;
+    color: #f7f7f7;
+    border: none;
+    /* padding: 5px 10px;  */
+    font-size: 12px; 
+    margin-bottom: 5px; /* 按钮之间的垂直间距 */
+}
+
+
+
+.paper-title{
+    margin: 0 auto;
+    width: 100%;
+    min-width: 1200px;
+    box-sizing: border-box;
+    padding-left: 2%;
+    padding-right: 2%;
+    height: 40px;
+    line-height: 60px;
+    /* font-size: 18px;*/
+    font-weight: bold;  
+    
+    color: #6c757d;
+    /* background-color:red; */
+} 
+
+
+
+.footer .social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    /* background-color: #fff; */
+    background-image:url(	https://piccache.cnki.net/nxgp/kcms/20250114r/images/gb/kcms8/ndetail/foot-bg.jpg) ;
+    background-size: cover; 
+    border-radius: 50%;
+    margin-right: 10px;
+    
+}
+
+.footer .social-icons a img {
+    width: 50px;
+    height: 50px;
+}
+
+.footer .footer-bottom {
+    background-color: #2e435e;
+    height: 150px;
+    padding: 20px;
+    text-align: center;
+    padding-left: 250px;
+}
+.icon-container {
+            display: flex;
+            
+            align-items: center;
+            gap: 8px; 
+            margin-top: 7px;
+        }
+
+
+.btn-wenhao{
+    border: none;
+    background: transparent;
+    color: transparent;
+}
+
+.panel {
+    margin-bottom: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.well {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    padding: 15px;
+}
+
+.row{
+    display: flex;
+    flex-direction:row;
+}
+
+.container-chengguo-kaitong{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;;
+
+}
+
+
+
+.footer {
+    margin-top: 20px;
+    padding: 20px 0;
+    background-color: #f8f9fa;
+    border-top: 1px solid #ddd;
+    font-size: 14px;
+    color: #6c757d;
+}

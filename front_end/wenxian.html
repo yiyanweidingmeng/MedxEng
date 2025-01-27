@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文献搜索</title>
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="wenxian.css">
+</head>
+<body>
+    <!-- 顶部导航 -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+
+            <div class="navbar-header">
+                <img src="../picture/zhiwanglogo.png" alt="EviMed Logo" class="logo" >
+                
+            </div>
+
+            <div class="dropdown pull-left">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  总库
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu " aria-labelledby="dropdownMenu1">
+                  <li><a href="#">总库</a></li>
+                  <li><a href="#">学术期刊</a></li>
+                  <li><a href="#">学位论文</a></li>
+                  <!-- <li role="separator" class="divider"></li>
+                  <li><a href="#">Separated link</a></li> -->
+                </ul>
+              </div>
+
+              <div class="btn-group pull-right">
+	
+                <div class="btn-group">
+                    <button type="button" class="btn btn-group dropdown-toggle" data-toggle="dropdown" id="search">
+                        检索
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">下拉链接 1</a></li>
+                        <li><a href="#">下拉链接 2</a></li>
+                    </ul>
+              </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-group dropdown-toggle" data-toggle="dropdown" id="AIsearch">
+                        AI增强检索
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">下拉链接 1</a></li>
+                        <li><a href="#">下拉链接 2</a></li>
+                    </ul>
+              </div>
+              <div class="btn-group">
+                <button type="button" class="btn btn-group dropdown-toggle" data-toggle="dropdown" id="chuban">
+                    出版来源
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">下拉链接 1</a></li>
+                    <li><a href="#">下拉链接 2</a></li>
+                </ul>
+          </div>
+          <div class="btn-group">
+            <button type="button" class="btn btn-group dropdown-toggle" data-toggle="dropdown" id="cnki">
+                我的CNKI
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="#">下拉链接 1</a></li>
+                <li><a href="#">下拉链接 2</a></li>
+            </ul>
+     
+      </div>
+
+      
+      
+        
+        <div class="btn-group">
+            <div class="icon-container">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <div><i class="fas fa-question-circle" title="提示"></i></div>
+        <div><i class="fas fa-bell" title="消息"></i></div>
+            </div>
+    </div>
+
+    <div class="btn-group">
+        <button type="button" class="btn btn-group dropdown-toggle" data-toggle="dropdown" id="cnki" title="aaaa">
+        充值
+        </button>
+    </div>
+
+    <div class="btn-group">
+        <button type="button" class="btn btn-group dropdown-toggle" data-toggle="dropdown" id="cnki" title="aaaa">
+        会员
+        </button>
+    </div>
+
+    <button class="btn btn-jigoudenglu dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        机构登录
+        
+      </button>
+      <button class="btn btn-jigoudenglu dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        个人登录
+        
+      </button>
+    </div>
+</div>
+
+
+<div class="container">
+    <div style="padding: 25px ;padding-bottom: 0;">
+        <form class="bs-example bs-example-form" role="form">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="input-group"  style="margin-left:170px ;margin-bottom: 5px;">
+                        <div class="input-group-btn">
+                            <button type="button" class="btn  
+                            dropdown-toggle" data-toggle="dropdown" style="width: 110px;background-color: rgb(254, 254, 251);">主题
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#">主题</a>
+                                </li>
+                                <li>
+                                    <a href="#">作者</a>
+                                </li>
+                                <li>
+                                    <a href="#">篇名</a>
+                                </li>
+                                <li>
+                                    <a href="#">关键词</a>
+                                </li>
+                            </ul>
+
+                        </div>
+                        
+                        
+    
+                        <!-- <input type="text" class="form-control"> -->
+                        <div class="search-container">
+                            <input type="text" class="search-input" placeholder="中文文献、外文文献">
+                            <i class="fas fa-search"></i>
+                        </div>
+
+
+                    </div><!-- /input-group -->
+                </div><!-- /.col-lg-6 -->
+                <div style="gap:30px;margin-left: 150px;">
+
+                <button type="button" class=" btn btn-sm btn-success btn-lg " style="background-color:#efefef;border: none;color: #000;">结果中检索</button>
+                <button type="button" class=" btn btn-sm btn-success btn-lg " style="border: none;background-color:#efefef ;color: #000;">检索设置</button>
+            
+            </div>
+            </div><!-- /.row -->
+        </form>
+    </div>
+</div>
+
+
+ <!-- 统计栏 -->
+ <div class="stats-bar">
+    <div class="container-fluid">
+        <ul class="nav nav-pills" style="background-color: #004FD9;height: 50px; padding: 5px;padding-left: 170px;">
+            <li ><a href="#" onmouseover="this.style.color='white'; this.style.backgroundColor='#007bff';" onmouseout="this.style.color='#f7f7f7'; this.style.backgroundColor='#004FD9';">总库 <span>1.975万</span></a></li>
+            <li><a href="#" onmouseover="this.style.color='white'; this.style.backgroundColor='#007bff';"onmouseout="this.style.color='#f7f7f7'; this.style.backgroundColor='#004FD9';">学术期刊 <span>1.02万</span></a></li>
+            <li><a href="#" onmouseover="this.style.color='white'; this.style.backgroundColor='#007bff';"onmouseout="this.style.color='#f7f7f7'; this.style.backgroundColor='#004FD9';">学位论文 <span>7588</span></a></li>
+            <li><a href="#" onmouseover="this.style.color='white'; this.style.backgroundColor='#007bff';"onmouseout="this.style.color='#f7f7f7'; this.style.backgroundColor='#004FD9';">会议 <span>1380</span></a></li>
+            <li><a href="#" onmouseover="this.style.color='white'; this.style.backgroundColor='#007bff';"onmouseout="this.style.color='#f7f7f7'; this.style.backgroundColor='#004FD9';">报纸 <span>30</span></a></li>
+            <li><a href="#" onmouseover="this.style.color='white'; this.style.backgroundColor='#007bff';"onmouseout="this.style.color='#f7f7f7'; this.style.backgroundColor='#004FD9';">年鉴 <span>8</span></a></li>
+            <li><a href="#" onmouseover="this.style.color='white'; this.style.backgroundColor='#007bff';"onmouseout="this.style.color='#f7f7f7'; this.style.backgroundColor='#004FD9';">图书 <span>8</span></a></li>
+            <li><a href="#" onmouseover="this.style.color='white'; this.style.backgroundColor='#007bff';"onmouseout="this.style.color='#f7f7f7'; this.style.backgroundColor='#004FD9';">专利 <span>5</span></a></li>
+            <li><a href="#" onmouseover="this.style.color='white'; this.style.backgroundColor='#007bff';"onmouseout="this.style.color='#f7f7f7'; this.style.backgroundColor='#004FD9';">标准 <span>5</span></a></li>
+            <li><a href="#" onmouseover="this.style.color='white'; this.style.backgroundColor='#007bff';"onmouseout="this.style.color='#f7f7f7'; this.style.backgroundColor='#004FD9';">成果 <span>153</span></a></li>
+        </ul>
+    </div>
+</div>
+
+
+<div class="container-fluid main-content">
+    <div class="row">
+        <!-- 左侧筛选栏 -->
+        <div class="col-md-2">
+           
+                <div class="row" style="display: flex;flex-direction: column;gap: 8px;">
+                    <div class="col-md-10">
+                        <div class="multi-select">
+                            <button class="btn btn-block  dropdown-toggle" type="button" data-toggle="dropdown" style="background-color:#e3ecfd;" >
+                                主题
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><label><input type="checkbox"> 老年人 (53)</label></li>
+                                <li><label><input type="checkbox"> 步态分析 (52)</label></li>
+                                <li><label><input type="checkbox"> 步态特征 (47)</label></li>
+                                <!-- Add more options as needed -->
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-10">
+                        <div class="multi-select">
+                            <button class="btn btn-block  dropdown-toggle" type="button" data-toggle="dropdown"style="background-color:#e3ecfd;">
+                                学科
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><label><input type="checkbox"> 体育 (474)</label></li>
+                                <li><label><input type="checkbox"> 神经病学 (312)</label></li>
+                                <li><label><input type="checkbox"> 外科学 (216)</label></li>
+                                <!-- Add more options as needed -->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <div class="multi-select">
+                            <button class="btn btn-block  dropdown-toggle" type="button" data-toggle="dropdown"style="background-color:#e3ecfd;">
+                                年度
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><label><input type="checkbox"> 体育 (474)</label></li>
+                                <li><label><input type="checkbox"> 神经病学 (312)</label></li>
+                                <li><label><input type="checkbox"> 外科学 (216)</label></li>
+                                <!-- Add more options as needed -->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <div class="multi-select">
+                            <button class="btn btn-block  dropdown-toggle" type="button" data-toggle="dropdown"style="background-color:#e3ecfd;">
+                                研究层次
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><label><input type="checkbox"> 体育 (474)</label></li>
+                                <li><label><input type="checkbox"> 神经病学 (312)</label></li>
+                                <li><label><input type="checkbox"> 外科学 (216)</label></li>
+                                <!-- Add more options as needed -->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <div class="multi-select">
+                            <button class="btn btn-block  dropdown-toggle" type="button" data-toggle="dropdown"style="background-color:#e3ecfd;">
+                                主办单位
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><label><input type="checkbox"> 体育 (474)</label></li>
+                                <li><label><input type="checkbox"> 神经病学 (312)</label></li>
+                                <li><label><input type="checkbox"> 外科学 (216)</label></li>
+                                <!-- Add more options as needed -->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <div class="multi-select">
+                            <button class="btn btn-block  dropdown-toggle" type="button" data-toggle="dropdown"style="background-color:#e3ecfd;">
+                                会议论文集
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><label><input type="checkbox"> 体育 (474)</label></li>
+                                <li><label><input type="checkbox"> 神经病学 (312)</label></li>
+                                <li><label><input type="checkbox"> 外科学 (216)</label></li>
+                                <!-- Add more options as needed -->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <div class="multi-select">
+                            <button class="btn btn-block  dropdown-toggle" type="button" data-toggle="dropdown"style="background-color:#e3ecfd;">
+                                作者
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><label><input type="checkbox"> 体育 (474)</label></li>
+                                <li><label><input type="checkbox"> 神经病学 (312)</label></li>
+                                <li><label><input type="checkbox"> 外科学 (216)</label></li>
+                                <!-- Add more options as needed -->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <div class="multi-select">
+                            <button class="btn btn-block  dropdown-toggle" type="button" data-toggle="dropdown"style="background-color:#e3ecfd;">
+                                单位
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><label><input type="checkbox"> 体育 (474)</label></li>
+                                <li><label><input type="checkbox"> 神经病学 (312)</label></li>
+                                <li><label><input type="checkbox"> 外科学 (216)</label></li>
+                                <!-- Add more options as needed -->
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-10">
+                        <div class="multi-select">
+                            <button class="btn btn-block  dropdown-toggle" type="button" data-toggle="dropdown"style="background-color:#e3ecfd;">
+                                基金
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><label><input type="checkbox"> 体育 (474)</label></li>
+                                <li><label><input type="checkbox"> 神经病学 (312)</label></li>
+                                <li><label><input type="checkbox"> 外科学 (216)</label></li>
+                                <!-- Add more options as needed -->
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+               
+            
+        </div>
+
+
+        <!-- 主要内容区 -->
+        <div class="col-md-9">
+            <div class="toolbar">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default">主题</button>
+                    <button type="button" class="btn btn-default">已选</button>
+                    <button type="button" class="btn btn-default">清除</button>
+                </div>
+                <div class="view-options pull-right">
+                    <span>显示: 20</span>
+                    <div class="btn-group">
+                        <button class="btn btn-default"><span class="glyphicon glyphicon-th-list" title="详情"></span></button>
+                        <button class="btn btn-default"><span class="glyphicon glyphicon-align-justify " title="列表"></span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="search-results">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th width="50">#</th>
+                            <th>题名</th>
+                            <th>作者</th>
+                            <th>来源</th>
+                            <th>发表时间</th>
+                            <th>被引</th>
+                            <th>下载</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td><input type="checkbox"> 1</td>
+                            <td class="title">
+                                <a href="#">黏土环境下六足机器人抱墙回流力学模型研究</a>
+                                <span class="label label-warning">网络首发</span>
+                            </td>
+                            <td>张某, 李某</td>
+                            <td>中国机械工程</td>
+                            <td>2025-01-26</td>
+                            <td>11</td>
+                            <td>
+                                <div class="btn-group">
+                                    <button class="btn btn-xs btn-default"><span class="glyphicon glyphicon-download-alt" title="下载"></span></button>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="btn-group">
+                                    <button class="btn btn-xs btn-default"><span class="glyphicon glyphicon-star" title="收藏"></span></button>
+                                    <button class="btn btn-xs btn-default"><span class="glyphicon glyphicon-share" title="转发"></span></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"> 2</td>
+                            <td class="title">
+                                <a href="#">黏土环境下六足机器人抱墙回流力学模型研究</a>
+                                <span class="label label-warning">网络首发</span>
+                            </td>
+                            <td>张某, 李某</td>
+                            <td>中国机械工程</td>
+                            <td>2025-01-26</td>
+                            <td>11</td>
+                            <td>
+                                <div class="btn-group">
+                                    <button class="btn btn-xs btn-default"><span class="glyphicon glyphicon-download-alt" title="下载"></span></button>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="btn-group">
+                                    <button class="btn btn-xs btn-default"><span class="glyphicon glyphicon-star" title="收藏"></span></button>
+                                    <button class="btn btn-xs btn-default"><span class="glyphicon glyphicon-share" title="转发"></span></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"> 3</td>
+                            <td class="title">
+                                <a href="#">黏土环境下六足机器人抱墙回流力学模型研究</a>
+                                <span class="label label-warning">网络首发</span>
+                            </td>
+                            <td>张某, 李某</td>
+                            <td>中国机械工程</td>
+                            <td>2025-01-26</td>
+                            <td>11</td>
+                            <td>
+                                <div class="btn-group">
+                                    <button class="btn btn-xs btn-default"><span class="glyphicon glyphicon-download-alt" title="下载"></span></button>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="btn-group">
+                                    <button class="btn btn-xs btn-default"><span class="glyphicon glyphicon-star" title="收藏"></span></button>
+                                    <button class="btn btn-xs btn-default"><span class="glyphicon glyphicon-share" title="转发"></span></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"> 4</td>
+                            <td class="title">
+                                <a href="#">黏土环境下六足机器人抱墙回流力学模型研究</a>
+                                <span class="label label-warning">网络首发</span>
+                            </td>
+                            <td>张某, 李某</td>
+                            <td>中国机械工程</td>
+                            <td>2025-01-26</td>
+                            <td>11</td>
+                            <td>
+                                <div class="btn-group">
+                                    <button class="btn btn-xs btn-default"><span class="glyphicon glyphicon-download-alt" title="下载"></span></button>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="btn-group">
+                                    <button class="btn btn-xs btn-default"><span class="glyphicon glyphicon-star" title="收藏"></span></button>
+                                    <button class="btn btn-xs btn-default"><span class="glyphicon glyphicon-share" title="转发"></span></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"> 5</td>
+                            <td class="title">
+                                <a href="#">黏土环境下六足机器人抱墙回流力学模型研究</a>
+                                <span class="label label-warning">网络首发</span>
+                            </td>
+                            <td>张某, 李某</td>
+                            <td>中国机械工程</td>
+                            <td>2025-01-26</td>
+                            <td>11</td>
+                            <td>
+                                <div class="btn-group">
+                                    <button class="btn btn-xs btn-default"><span class="glyphicon glyphicon-download-alt" title="下载"></span></button>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="btn-group">
+                                    <button class="btn btn-xs btn-default"><span class="glyphicon glyphicon-star" title="收藏"></span></button>
+                                    <button class="btn btn-xs btn-default"><span class="glyphicon glyphicon-share" title="转发"></span></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"> 6</td>
+                            <td class="title">
+                                <a href="#">黏土环境下六足机器人抱墙回流力学模型研究</a>
+                                <span class="label label-warning">网络首发</span>
+                            </td>
+                            <td>张某, 李某</td>
+                            <td>中国机械工程</td>
+                            <td>2025-01-26</td>
+                            <td>11</td>
+                            <td>
+                                <div class="btn-group">
+                                    <button class="btn btn-xs btn-default"><span class="glyphicon glyphicon-download-alt" title="下载"></span></button>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="btn-group">
+                                    <button class="btn btn-xs btn-default"><span class="glyphicon glyphicon-star" title="收藏"></span></button>
+                                    <button class="btn btn-xs btn-default"><span class="glyphicon glyphicon-share" title="转发"></span></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"> 7</td>
+                            <td class="title">
+                                <a href="#">黏土环境下六足机器人抱墙回流力学模型研究</a>
+                                <span class="label label-warning">网络首发</span>
+                            </td>
+                            <td>张某, 李某</td>
+                            <td>中国机械工程</td>
+                            <td>2025-01-26</td>
+                            <td>11</td>
+                            <td>
+                                <div class="btn-group">
+                                    <button class="btn btn-xs btn-default"><span class="glyphicon glyphicon-download-alt" title="下载"></span></button>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="btn-group">
+                                    <button class="btn btn-xs btn-default"><span class="glyphicon glyphicon-star" title="收藏"></span></button>
+                                    <button class="btn btn-xs btn-default"><span class="glyphicon glyphicon-share" title="转发"></span></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"> 8</td>
+                            <td class="title">
+                                <a href="#">黏土环境下六足机器人抱墙回流力学模型研究</a>
+                                <span class="label label-warning">网络首发</span>
+                            </td>
+                            <td>张某, 李某</td>
+                            <td>中国机械工程</td>
+                            <td>2025-01-26</td>
+                            <td>11</td>
+                            <td>
+                                <div class="btn-group">
+                                    <button class="btn btn-xs btn-default"><span class="glyphicon glyphicon-download-alt" title="下载"></span></button>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="btn-group">
+                                    <button class="btn btn-xs btn-default"><span class="glyphicon glyphicon-star" title="收藏"></span></button>
+                                    <button class="btn btn-xs btn-default"><span class="glyphicon glyphicon-share" title="转发"></span></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"> 9</td>
+                            <td class="title">
+                                <a href="#">黏土环境下六足机器人抱墙回流力学模型研究</a>
+                                <span class="label label-warning">网络首发</span>
+                            </td>
+                            <td>张某, 李某</td>
+                            <td>中国机械工程</td>
+                            <td>2025-01-26</td>
+                            <td>11</td>
+                            <td>
+                                <div class="btn-group">
+                                    <button class="btn btn-xs btn-default"><span class="glyphicon glyphicon-download-alt" title="下载"></span></button>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="btn-group">
+                                    <button class="btn btn-xs btn-default"><span class="glyphicon glyphicon-star" title="收藏"></span></button>
+                                    <button class="btn btn-xs btn-default"><span class="glyphicon glyphicon-share" title="转发"></span></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"> 10</td>
+                            <td class="title">
+                                <a href="#">黏土环境下六足机器人抱墙回流力学模型研究</a>
+                                <span class="label label-warning">网络首发</span>
+                            </td>
+                            <td>张某, 李某</td>
+                            <td>中国机械工程</td>
+                            <td>2025-01-26</td>
+                            <td>11</td>
+                            <td>
+                                <div class="btn-group">
+                                    <button class="btn btn-xs btn-default"><span class="glyphicon glyphicon-download-alt" title="下载"></span></button>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="btn-group">
+                                    <button class="btn btn-xs btn-default"><span class="glyphicon glyphicon-star" title="收藏"></span></button>
+                                    <button class="btn btn-xs btn-default"><span class="glyphicon glyphicon-share" title="转发"></span></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"> 11</td>
+                            <td class="title">
+                                <a href="#">黏土环境下六足机器人抱墙回流力学模型研究</a>
+                                <span class="label label-warning">网络首发</span>
+                            </td>
+                            <td>张某, 李某</td>
+                            <td>中国机械工程</td>
+                            <td>2025-01-26</td>
+                            <td>11</td>
+                            <td>
+                                <div class="btn-group">
+                                    <button class="btn btn-xs btn-default"><span class="glyphicon glyphicon-download-alt" title="下载"></span></button>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="btn-group">
+                                    <button class="btn btn-xs btn-default"><span class="glyphicon glyphicon-star" title="收藏"></span></button>
+                                    <button class="btn btn-xs btn-default"><span class="glyphicon glyphicon-share" title="转发"></span></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"> 12</td>
+                            <td class="title">
+                                <a href="#">黏土环境下六足机器人抱墙回流力学模型研究</a>
+                                <span class="label label-warning">网络首发</span>
+                            </td>
+                            <td>张某, 李某</td>
+                            <td>中国机械工程</td>
+                            <td>2025-01-26</td>
+                            <td>11</td>
+                            <td>
+                                <div class="btn-group">
+                                    <button class="btn btn-xs btn-default"><span class="glyphicon glyphicon-download-alt" title="下载"></span></button>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="btn-group">
+                                    <button class="btn btn-xs btn-default"><span class="glyphicon glyphicon-star" title="收藏"></span></button>
+                                    <button class="btn btn-xs btn-default"><span class="glyphicon glyphicon-share" title="转发"></span></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"> 13</td>
+                            <td class="title">
+                                <a href="#">黏土环境下六足机器人抱墙回流力学模型研究</a>
+                                <span class="label label-warning">网络首发</span>
+                            </td>
+                            <td>张某, 李某</td>
+                            <td>中国机械工程</td>
+                            <td>2025-01-26</td>
+                            <td>11</td>
+                            <td>
+                                <div class="btn-group">
+                                    <button class="btn btn-xs btn-default"><span class="glyphicon glyphicon-download-alt" title="下载"></span></button>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="btn-group">
+                                    <button class="btn btn-xs btn-default"><span class="glyphicon glyphicon-star" title="收藏"></span></button>
+                                    <button class="btn btn-xs btn-default"><span class="glyphicon glyphicon-share" title="转发"></span></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"> 14</td>
+                            <td class="title">
+                                <a href="#">黏土环境下六足机器人抱墙回流力学模型研究</a>
+                                <span class="label label-warning">网络首发</span>
+                            </td>
+                            <td>张某, 李某</td>
+                            <td>中国机械工程</td>
+                            <td>2025-01-26</td>
+                            <td>11</td>
+                            <td>
+                                <div class="btn-group">
+                                    <button class="btn btn-xs btn-default"><span class="glyphicon glyphicon-download-alt" title="下载"></span></button>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="btn-group">
+                                    <button class="btn btn-xs btn-default"><span class="glyphicon glyphicon-star" title="收藏"></span></button>
+                                    <button class="btn btn-xs btn-default"><span class="glyphicon glyphicon-share" title="转发"></span></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"> 15</td>
+                            <td class="title">
+                                <a href="#">黏土环境下六足机器人抱墙回流力学模型研究</a>
+                                <span class="label label-warning">网络首发</span>
+                            </td>
+                            <td>张某, 李某</td>
+                            <td>中国机械工程</td>
+                            <td>2025-01-26</td>
+                            <td>11</td>
+                            <td>
+                                <div class="btn-group">
+                                    <button class="btn btn-xs btn-default"><span class="glyphicon glyphicon-download-alt" title="下载"></span></button>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="btn-group">
+                                    <button class="btn btn-xs btn-default"><span class="glyphicon glyphicon-star" title="收藏"></span></button>
+                                    <button class="btn btn-xs btn-default"><span class="glyphicon glyphicon-share" title="转发"></span></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- 更多搜索结果... -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container">
+        <div class="row" >
+            <div class="col-md-12">
+                <!-- Pagination -->
+                <ul class="pagination"  >
+                    <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">6</a></li>
+                    <li><a href="#">7</a></li>
+                    <li><a href="#">8</a></li>
+                    <li><a href="#">9</a></li>
+                    <li><a href="#">下一页</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 20px;">
+            <div class="col-md-12">
+                <!-- Related Searches -->
+                <p><strong>相关搜索：</strong></p>
+                <ul class="search-keywords">
+                    <li><a href="#">步态分析</a></li>
+                    <li><a href="#">负重方式</a></li>
+                    <li><a href="#">步态周期</a></li>
+                    <li><a href="#">步态分析系统</a></li>
+                    <li><a href="#">足底压力</a></li>
+                    <li><a href="#">脚压系统</a></li>
+                    <li><a href="#">偏瘫步态分析</a></li>
+                    <li><a href="#">3D运动捕捉</a></li>
+                    <li><a href="#">步态失稳</a></li>
+                    <li><a href="#">步态数据</a></li>
+                    <li><a href="#">步态对称</a></li>
+                    <li><a href="#">踝支具</a></li>
+                    <li><a href="#">针对性康复训练</a></li>
+                    <li><a href="#">步态特征</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+
+
+      <footer class="footer" >
+               
+        <div class="footer-top" style="margin:0%;padding: 10px;background-image:url(https://piccache.cnki.net/nxgp/kcms/20250114r/images/gb/kcms8/ndetail/foot-bg.jpg) ;">
+            <div class="container" >
+                <div class="row text-center text-md-start" style="font-size: 0.8rem; ">
+
+                    <div class="col-md-4 mb-4 mb-md-">
+                        <h6>读者服务</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#">购买知网卡</a></li>
+                            <li><a href="#">充值中心</a></li>
+                            <li><a href="#">我的CNKI</a></li>
+                            <li><a href="#">帮助中心</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 mb-4 mb-md-0">
+                        <h6>CNKI常用软件下载</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#">CAJViewer浏览器</a></li>
+                            <li><a href="#">知网节（原E-Study）</a></li>
+                            <li><a href="#">下载专区</a></li>
+                            <li><a href="#">标准阅读器</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 mb-4 mb-md-0">
+                        <h6>特色服务</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#">手机客户端</a></li>
+                            <li><a href="#">知网阅读</a></li>
+                            <li><a href="#">知网远程</a></li>
+                            <li><a href="#">编辑服务</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 mb-4 mb-md-0">
+                        <h6>客服咨询</h6>
+                        <ul class="list-unstyled">
+                            <li>订卡热线:400-819-9993</li>
+                            <li>服务热线:400-810-9888</li>
+                            <li>在线咨询：<a href="mailto:service@cnki.net">service@cnki.net</a></li>
+                            <li>邮件咨询：<a href="mailto:help@cnki.net">help@cnki.net</a></li>
+                        </ul>
+
+                    </div>
+                    
+
+                    <div class="social-icons mt-3" style="display: flex; gap: 18px;">
+                    
+                        <div class="vertical-line" style="  width: 1px; /* 设置分割线宽度 */
+    background-color: #000;"></div>
+                            <a href="#" class="me-2"><img src="https://cdn-icons-png.flaticon.com/512/145/145812.png" alt="新浪微博">新浪微博</a>
+                            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/145/145804.png" alt="官方微信">官方微信</a>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+
+    <!-- Bottom Section -->
+    <div class="footer-bottom text-center text-md-start" style="font-size: 0.8rem;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <p class="mb-2">
+                        © 1998-2025 CNKI 版权所有 | 京 ICP 证 040431 号 | 网络出版服务许可证：网络出证（京）字第 416 号
+                    </p>
+                    <p>
+                        <a href="#">隐私政策</a> | <a href="#">用户协议</a> | <a href="#">知网招聘</a>
+                    </p>
+                    <hr>
+                    <p>京 ICP 证 040431 号 网络出版服务许可证网出证(京)字第416号 出版物经营许可证 京公网安备 11010802020460 号 互联网宗教信息服务许可证：京（2022）0000115
+                        《中国学术期刊（光盘版）》电子杂志社有限公司 KDN 平台基础技术由 KBASE 11.0 提供.</p>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+
+
+        </div>
+
+
+    
+    </footer>    
+</div>
+
+
+
+
+
+
+
+
+
+
+<script src="js/jquery-3.7.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
